@@ -1,0 +1,59 @@
+[
+  {
+    "platform": "Dcard",
+    "url": "https://www.dcard.tw/f/food/p/258493755",
+    "title": "台中慶生餐廳（內有選手）",
+    "note": "討論 GULU Dining、Asiino、敘禾燒肉、水相餐聚苑等選項；意見不一，僅作選店線索",
+    "restaurants": [
+      "gulu-dining"
+    ],
+    "origin": "reviewed_index",
+    "lastChecked": "2026-11-19"
+  },
+  {
+    "platform": "Dcard",
+    "url": "https://www.dcard.tw/f/food/p/255337771",
+    "title": "台中餐酒館推薦 GULU dining",
+    "note": "網友分享 GULU Dining 的料理與氛圍",
+    "restaurants": [
+      "gulu-dining"
+    ],
+    "origin": "reviewed_index",
+    "lastChecked": "2026-11-19"
+  },
+  {
+    "platform": "Dcard",
+    "url": "https://www.dcard.tw/f/food/p/255943899",
+    "title": "台中慶生餐廳（內有選手）",
+    "note": "討論候選餐廳含 MEATGQ",
+    "restaurants": [
+      "meatgq"
+    ],
+    "origin": "reviewed_index",
+    "lastChecked": "2026-11-19"
+  },
+  {
+    "platform": "Dcard",
+    "url": "https://www.dcard.tw/f/food/p/255981012",
+    "title": "台中慶生餐廳求推薦",
+    "note": "使用者將法森列為牛排與鐵板燒的慶生候選",
+    "restaurants": [
+      "laffection"
+    ],
+    "origin": "reviewed_index",
+    "lastChecked": "2026-11-19"
+  },
+  {
+    "platform": "Dcard",
+    "url": "https://www.dcard.tw/f/food/p/237862078",
+    "title": "問 台中慶生餐廳",
+    "note": "網友討論屋馬、茶六等熱門燒肉及法森",
+    "restaurants": [
+      "umai-zhonggang",
+      "chaliu-gongyi",
+      "laffection"
+    ],
+    "origin": "reviewed_index",
+    "lastChecked": "2026-11-19"
+  }
+]
