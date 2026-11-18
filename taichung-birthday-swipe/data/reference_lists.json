@@ -111,11 +111,113 @@
       ]
     },
     {
-      "id": "list-one",
-      "name": "Google 地圖清單 01",
+      "id": "taichung-food",
+      "name": "台中美食",
       "source": "https://maps.app.goo.gl/ArYZJBZ1c9hAUNEv5",
-      "items": [],
-      "status": "pending_public_access"
+      "reportedTotal": 76,
+      "visibleSample": 20,
+      "items": [
+        {
+          "name": "牛と柚拉麵｜牛骨創作拉麵（IG 公告店休訊息）",
+          "type": "拉麵",
+          "eligible": "unverified"
+        },
+        {
+          "name": "沼澤咖哩瑞豐店",
+          "type": "咖哩",
+          "eligible": "unverified"
+        },
+        {
+          "name": "亼＜ㄐ一ˊ＞ 拉麵專門店",
+          "type": "拉麵",
+          "eligible": "unverified"
+        },
+        {
+          "name": "久根食事",
+          "type": "居酒屋",
+          "eligible": "unverified"
+        },
+        {
+          "name": "hun",
+          "type": "義式料理",
+          "eligible": "unverified"
+        },
+        {
+          "name": "Yu Yuan Izakaya Restaurant",
+          "type": "居酒屋",
+          "eligible": "unverified"
+        },
+        {
+          "name": "Sushi Suzuki",
+          "type": "壽司",
+          "eligible": "unverified"
+        },
+        {
+          "name": "一井水產",
+          "type": "水產",
+          "eligible": "unverified"
+        },
+        {
+          "name": "嚐粵工坊-粵菜私廚",
+          "type": "私廚",
+          "eligible": "unverified"
+        },
+        {
+          "name": "Munchi",
+          "type": "餐酒館",
+          "eligible": "unverified"
+        },
+        {
+          "name": "F.f 小餐廳(無菜單)",
+          "type": "無菜單料理",
+          "eligible": "unverified"
+        },
+        {
+          "name": "MeatGQ Steak",
+          "type": "牛排",
+          "eligible": "unverified"
+        },
+        {
+          "name": "D EATERY",
+          "type": "創意料理",
+          "eligible": "unverified"
+        },
+        {
+          "name": "CHI Cuisine志氣",
+          "type": "私廚",
+          "eligible": "unverified"
+        },
+        {
+          "name": "JIFS COOKING SALON",
+          "type": "西式料理",
+          "eligible": "unverified"
+        },
+        {
+          "name": "Sozai Taichung",
+          "type": "餐酒館",
+          "eligible": "unverified"
+        },
+        {
+          "name": "Aonohero 沖繩soba拉麵 沖繩飯糰 沖繩輕食 / 手工皮靴工作室",
+          "type": "拉麵",
+          "eligible": "unverified"
+        },
+        {
+          "name": "酉食YouShi ｜日本酒小酒館",
+          "type": "餐酒館",
+          "eligible": "unverified"
+        },
+        {
+          "name": "浪金生魚片",
+          "type": "日式料理",
+          "eligible": "unverified"
+        },
+        {
+          "name": "Rong Cuisine",
+          "type": "餐廳",
+          "eligible": "unverified"
+        }
+      ]
     }
   ]
 }
