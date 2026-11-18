@@ -403,5 +403,106 @@
         "note": "台中慶生餐廳推薦及套餐價格"
       }
     ]
+  },
+  {
+    "id": "oomata",
+    "name": "大股熟成燒肉專門・台中店",
+    "area": "西區",
+    "address": "台中市西區公益路282之2號2樓",
+    "budget": [
+      1785,
+      2400
+    ],
+    "cuisine": "熟成燒肉",
+    "tagline": "專人代烤熟成肉，讓生日聚餐只管享受。",
+    "desc": "主打熟成燒肉、厚切牛舌與專人代烤，座位有日式低調氣息。",
+    "styles": [
+      "日式質感",
+      "都會奢華"
+    ],
+    "foods": [
+      "燒肉"
+    ],
+    "atmos": [
+      "安靜約會",
+      "私密包廂"
+    ],
+    "mains": [
+      "牛肉",
+      "和牛",
+      "海鮮"
+    ],
+    "features": [
+      "桌邊服務"
+    ],
+    "images": [
+      "https://img.fun-life.com.tw/Taichung-snacks/oomata/DSC00168.jpg",
+      "https://media.lyes.tw/photo/pr/prf1fnh2v269gno2/o.jpg"
+    ],
+    "credit": "阿新筆記／涼子是也",
+    "source": "https://shin.tw/oomata/",
+    "more": "https://inline.app/groups/oomata",
+    "priceNote": "Dcard 參考雙人特選組 NT$3,570（每人約 NT$1,785）；套餐與服務費請再確認。",
+    "social": [
+      {
+        "platform": "Dcard",
+        "url": "https://www.dcard.tw/f/food/p/262046421",
+        "note": "慶生比較文討論雙人特選、豪華組合與份量"
+      }
+    ]
+  },
+  {
+    "id": "le-gout-chongde",
+    "name": "樂葵法式鐵板燒・崇德店",
+    "area": "北屯區",
+    "address": "台中市北屯區崇德五路345號2樓",
+    "budget": [
+      1650,
+      2800
+    ],
+    "cuisine": "法式鐵板燒",
+    "tagline": "現場主廚料理，節奏優雅又有表演感。",
+    "desc": "法式醬汁結合鐵板料理的多道式套餐，適合喜歡正式但有互動感的生日約會。",
+    "styles": [
+      "法式優雅",
+      "都會奢華"
+    ],
+    "foods": [
+      "鐵板燒",
+      "法式料理"
+    ],
+    "atmos": [
+      "安靜約會"
+    ],
+    "mains": [
+      "牛肉",
+      "海鮮",
+      "多道套餐"
+    ],
+    "features": [
+      "壽星驚喜",
+      "桌邊服務",
+      "精緻甜點"
+    ],
+    "images": [
+      "https://ytimg.yam.com/img/ARTICLE/1200x630/2022122814163957.jpg",
+      "https://media.vogue.com.tw/photos/635bbfeb7440a0a03bd06aa9/master/w_1600%2Cc_limit/IMG-8548.jpg"
+    ],
+    "credit": "輕旅行／Vogue Taiwan",
+    "source": "https://travel.yam.com/article/129615",
+    "more": "https://www.le-gout.com.tw/",
+    "priceNote": "官網季節套餐標示 NT$1,650+10% 起；菜單可能調整，總額以訂位頁為準。",
+    "social": [
+      {
+        "platform": "Dcard",
+        "url": "https://www.dcard.tw/f/food/p/255981012",
+        "note": "網友推薦慶生候選名單"
+      },
+      {
+        "platform": "Dcard",
+        "url": "https://www.dcard.tw/f/food/p/240556232",
+        "note": "台中樂葵法式鐵板燒體驗文"
+      }
+    ]
   }
 ]
