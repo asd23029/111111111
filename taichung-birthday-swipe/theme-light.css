@@ -472,3 +472,17 @@ button:disabled { opacity:.4; }
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important;}
 }
+
+/* Personal Google Maps shared-list references */
+.reference-box{background:linear-gradient(120deg,#fff5ee,#fffdf8);border:1px solid #f2e1d5;border-radius:22px;padding:26px 29px;margin-bottom:22px}
+.reference-box h2{font:700 21px var(--serif);letter-spacing:.2px;color:#41403a;margin:11px 0 7px}
+.reference-box h2 span{color:#e98f81}
+.reference-box p{font-size:12px;color:#938b82;line-height:1.9;margin:0 0 19px}
+.reference-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.reference-links a{display:flex;align-items:center;gap:14px;min-width:0;border:1px solid #eedfd4;background:#fff;border-radius:15px;padding:16px;color:#645850;transition:transform .2s,border-color .2s}
+.reference-links a:hover{transform:translateY(-2px);border-color:#e7af9e}
+.ref-icon{display:grid;place-items:center;border-radius:12px;width:37px;height:37px;flex:0 0 37px;background:#f1f7ed;color:#6fa282;font-size:21px}
+.reference-links a>span:nth-child(2){font-size:13px;font-weight:800;line-height:1.35}
+.reference-links small{display:block;color:#b4a59c;font-size:10px;font-weight:400;margin-top:6px}
+.reference-links b{color:#da8e7d;font-weight:700;margin-left:auto}
+@media(max-width:730px){.reference-box{padding:21px 17px;border-radius:18px}.reference-box h2{font-size:18px}.reference-links{grid-template-columns:1fr}.reference-links a{padding:12px 14px}}
