@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#171b18">
+  <meta name="description" content="用左滑右滑，找到台中最適合慶生的餐廳。探索真實餐廳照片、料理與氣氛，匯入 Google 地圖清單，和朋友一起挑選。">
+  <meta property="og:title" content="今晚，吃哪間？｜台中慶生餐廳滑選">
+  <meta property="og:description" content="左滑先不要，右滑我可以。台中 NT$1,000–3,000／人慶生餐廳，讓選擇變得有趣。">
+  <title>今晚，吃哪間？｜台中慶生餐廳滑選</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="回到首頁">
+        <span class="brand-glyph">✳</span>
+        <span>今晚<span class="brand-comma">，</span>吃哪間<span class="brand-punct">？</span><small>TAICHUNG · BIRTHDAY EDITION</small></span>
+      </a>
+      <button class="topbar-share" id="inviteBtn" type="button" title="邀請朋友一起玩"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 16V3m0 0L7 8m5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg><span>邀朋友玩</span></button>
+    </header>
+    <main>
+      <section id="explore" class="page is-active" aria-label="探索餐廳">
+        <div class="intro"><div class="eyebrow"><span class="eyebrow-line"></span>THE BIRTHDAY PICKER <span class="little-star">✦</span> 台中限定</div>
+          <h1>生日這一餐，<br><em>交給直覺選。</em></h1>
+          <p>把想吃的留下，把不心動的滑走。<br class="hide-desktop">慢慢選，總有一間剛好對味。</p>
+        </div>
+        <div class="section-heading"><div><span class="section-kicker">01 / SET THE MOOD</span><h2>今天想要什麼感覺？</h2></div><button class="text-link" id="clearFilters" type="button">清除篩選 ↗</button></div>
+        <div class="filters" id="filters"></div>
+        <div class="deck-header"><div><span class="section-kicker">02 / THE SWIPE</span><h2>心動就右滑 <span class="accent-heart">♥</span></h2></div><div class="progress-group"><span id="progressText">01 / 07</span><div class="progress-bar"><span id="progressFill"></span></div></div></div>
+        <div class="swipe-layout">
+          <div class="deck-frame">
+            <div class="swipe-hint left">PASS ↖</div><div class="swipe-hint right">LOVE ↗</div>
+            <div id="deck" class="deck" aria-live="polite"></div>
+            <div class="deck-actions">
+              <button id="rejectBtn" class="circle-btn reject" aria-label="不要這間" type="button"><span>✕</span></button>
+              <button id="undoBtn" class="circle-btn undo" aria-label="復原上一張" title="復原上一張" type="button"><span>↶</span></button>
+              <button id="likeBtn" class="circle-btn like" aria-label="收藏這間" type="button"><span>♥</span></button>
+            </div>
+            <div class="gesture-help">← 左滑不喜歡 <span>·</span> 右滑加入心動清單 →</div>
+          </div>
+          <aside class="right-rail">
+            <div class="rail-label">A LITTLE REMINDER <span>✳</span></div>
+            <h3>選餐廳，<br>可以像談戀愛<br>一樣有感覺。</h3>
+            <p>美味、燈光、氣氛、那個讓你想拍照的角落。每一項，都是慶生的理由。</p>
+            <div class="rail-divider"></div>
+            <div class="rail-stat"><span>精選台中餐廳</span><strong id="railCount">07<span>間</span></strong></div>
+            <div class="rail-stat"><span>慶生人均預算</span><strong>1–3k<span> TWD</span></strong></div>
+            <button class="rail-cta" id="railImport" type="button">有自己的口袋名單？<br><strong>匯入 Google 地圖收藏 ↗</strong></button>
+          </aside>
+        </div>
+        <p class="notice">餐廳照片取自標示的來源網站，版權歸原權利人所有。價格為參考點餐預算，依現場菜單、套餐與服務費為準；本網站不提供即時訂位庫存。</p>
+      </section>
+      <section id="favorites" class="page" aria-label="心動清單">
+        <div class="page-heading"><span class="section-kicker">YOUR SHORTLIST</span><h1>你的心動清單 <em>♥</em></h1><p>右滑留下的餐廳，都在這裡。</p></div>
+        <div class="favs-tools"><span id="favCount">已收藏 0 間</span><div><button class="subtle-btn" id="shareFavs" type="button">分享清單 ↗</button><button class="subtle-btn" id="resetChoices" type="button">重新選一輪</button></div></div>
+        <div id="favoriteGrid" class="favorite-grid"></div>
+      </section>
+      <section id="import" class="page" aria-label="匯入 Google 地圖收藏">
+        <div class="page-heading"><span class="section-kicker">BRING YOUR LIST</span><h1>把口袋名單<br><em>一起帶來。</em></h1><p>Google 地圖存了一堆餐廳？把清單加進來，一起滑、一起選。</p></div>
+        <div class="import-grid">
+          <div class="import-panel primary-import"><div class="panel-icon">↥</div><span class="section-kicker">01 / IMPORT A FILE</span><h2>從 Google 地圖匯出</h2><p>透過 Google Takeout 匯出「已儲存的地點」，上傳 JSON、CSV、KML、GeoJSON，或自行整理的 TXT。</p>
+            <label class="file-drop" id="fileDrop" for="fileInput"><span class="upload-symbol">↑</span><strong>選擇檔案，或拖曳到這裡</strong><small>.json · .csv · .kml · .geojson · .txt</small><input id="fileInput" type="file" accept=".json,.csv,.kml,.geojson,.txt,text/plain,application/json,text/csv"></label>
+            <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://takeout.google.com/">前往 Google Takeout 匯出 ↗</a>
+          </div>
+          <div class="import-panel"><div class="panel-icon">⌁</div><span class="section-kicker">02 / PASTE YOUR LIST</span><h2>直接貼上餐廳名稱</h2><p>每行一間餐廳，支援「餐廳名稱｜地區｜預算」格式。未提供照片會顯示待補照片，不會套用假圖片。</p><textarea id="pasteNames" rows="5" placeholder="例如：&#10;屋馬燒肉 中港店&#10;某某餐酒館｜西區｜1800"></textarea><button id="pasteImport" type="button" class="primary-btn">加入我的待選餐廳 <span>→</span></button></div>
+        </div>
+        <div class="import-panel google-link"><span class="section-kicker">03 / GOOGLE MAPS LINK</span><h2>只有 Google 地圖清單連結？</h2><p>可先保存來源連結，或把清單中的餐廳名稱貼到上方。Google 地圖的公開分享連結沒有提供本站可直接讀取完整內容的官方公開介面，因此不會假裝已經自動抓取餐廳。</p><div class="link-form"><input id="googleMapUrl" type="url" placeholder="https://maps.app.goo.gl/… 或 Google Maps 清單網址"><button id="saveMapUrl" type="button">儲存連結</button></div><div id="savedMapLink"></div></div>
+        <div class="import-summary"><div><span class="section-kicker">YOUR IMPORTS</span><h2>已加入的餐廳 <span id="importCount">0</span></h2></div><button id="clearImported" class="subtle-btn" type="button">清空匯入</button></div><div id="importedList" class="imported-list"></div>
+      </section>
+    </main>
+    <nav class="bottom-nav" aria-label="功能選單"><button data-tab="explore" class="nav-tab active" type="button"><span>◈</span><small>滑餐廳</small></button><button data-tab="favorites" class="nav-tab" type="button"><span>♡</span><small>心動清單</small><i id="navHeartCount" hidden>0</i></button><button data-tab="import" class="nav-tab" type="button"><span>↥</span><small>匯入清單</small></button></nav>
+    <footer class="footer"><span>✳ TONIGHT, WHERE TO EAT?</span><span>Made for birthday nights in Taichung · 2026</span></footer>
+  </div>
+  <div id="dialogRoot"></div><div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
