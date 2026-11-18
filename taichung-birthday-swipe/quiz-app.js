@@ -69,7 +69,7 @@ function photoSource(question){
 }
 function photoCard(question){
  const image=photoSource(question);
- const visual=image.src?'<img class="quiz-photo" src="'+escapeHtml(image.src)+'" alt="真實台中餐廳的'+escapeHtml(question.label)+'："'+escapeHtml(question.title)+'" draggable="false">':'<div class="quiz-image-fallback">✿<small>圖片暫時無法顯示，請依描述判斷</small></div>';
+ const visual=image.src?'<img class="quiz-photo" src="'+escapeHtml(image.src)+'" alt="台中餐廳實景照片：'+escapeHtml(question.title)+'" draggable="false">':'<div class="quiz-image-fallback">✿<small>圖片暫時無法顯示，請依描述判斷</small></div>';
  return '<article class="preference-card photo-preference" aria-label="'+escapeHtml(question.title)+'"><div class="preference-visual">'+visual+
  '<div class="preference-vignette"></div><span class="preference-category">✦ '+escapeHtml(question.label)+'</span>'+
  (image.source?'<a class="preference-credit" href="'+escapeHtml(image.source)+'" target="_blank" rel="noopener noreferrer" aria-label="開啟照片來源">照片來源 ↗</a>':"")+
