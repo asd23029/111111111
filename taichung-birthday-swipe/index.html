@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#171b18">
+  <meta name="theme-color" content="#fffdf9">
   <meta name="description" content="用左滑右滑，找到台中最適合慶生的餐廳。探索真實餐廳照片、料理與氣氛，匯入 Google 地圖清單，和朋友一起挑選。">
   <meta property="og:title" content="今晚，吃哪間？｜台中慶生餐廳滑選">
   <meta property="og:description" content="左滑先不要，右滑我可以。台中 NT$1,000–3,000／人慶生餐廳，讓選擇變得有趣。">
@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="theme-light.css">
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -26,13 +27,13 @@
     </header>
     <main>
       <section id="explore" class="page is-active" aria-label="探索餐廳">
-        <div class="intro"><div class="eyebrow"><span class="eyebrow-line"></span>THE BIRTHDAY PICKER <span class="little-star">✦</span> 台中限定</div>
-          <h1>生日這一餐，<br><em>交給直覺選。</em></h1>
-          <p>把想吃的留下，把不心動的滑走。<br class="hide-desktop">慢慢選，總有一間剛好對味。</p>
+        <div class="intro"><div class="eyebrow"><span class="eyebrow-line"></span>BIRTHDAY DINNER CLUB <span class="little-star">✦</span> 台中限定</div>
+          <h1>生日這一餐，<br><em>滑到喜歡為止 ♡</em></h1>
+          <p>台中慶生餐廳，每人預算 NT$1,000–3,000。<br class="hide-desktop">左滑跳過、右滑收藏，一起找到喜歡的那間。</p>
         </div>
-        <div class="section-heading"><div><span class="section-kicker">01 / SET THE MOOD</span><h2>今天想要什麼感覺？</h2></div><button class="text-link" id="clearFilters" type="button">清除篩選 ↗</button></div>
+        <div class="section-heading"><div><span class="section-kicker">01 / SET THE MOOD</span><h2>先選你喜歡的 ♡</h2></div><button class="text-link" id="clearFilters" type="button">清除篩選 ↗</button></div>
         <div class="filters" id="filters"></div>
-        <div class="deck-header"><div><span class="section-kicker">02 / THE SWIPE</span><h2>心動就右滑 <span class="accent-heart">♥</span></h2></div><div class="progress-group"><span id="progressText">01 / 07</span><div class="progress-bar"><span id="progressFill"></span></div></div></div>
+        <div class="deck-header"><div><span class="section-kicker">02 / THE SWIPE</span><h2>喜歡就往右滑 <span class="accent-heart">♥</span></h2></div><div class="progress-group"><span id="progressText">01 / 07</span><div class="progress-bar"><span id="progressFill"></span></div></div></div>
         <div class="swipe-layout">
           <div class="deck-frame">
             <div class="swipe-hint left">PASS ↖</div><div class="swipe-hint right">LOVE ↗</div>
@@ -45,9 +46,9 @@
             <div class="gesture-help">← 左滑不喜歡 <span>·</span> 右滑加入心動清單 →</div>
           </div>
           <aside class="right-rail">
-            <div class="rail-label">A LITTLE REMINDER <span>✳</span></div>
-            <h3>選餐廳，<br>可以像談戀愛<br>一樣有感覺。</h3>
-            <p>美味、燈光、氣氛、那個讓你想拍照的角落。每一項，都是慶生的理由。</p>
+            <div class="rail-label">A SWEET LITTLE NOTE <span>✳</span></div>
+            <h3>生日的儀式感，<br>就從選餐廳<br>開始吧 ♡</h3>
+            <p>美味的主餐、剛好的燈光、想拍照的小角落。把心動的都留下，一間一間慢慢挑。</p>
             <div class="rail-divider"></div>
             <div class="rail-stat"><span>精選台中餐廳</span><strong id="railCount">07<span>間</span></strong></div>
             <div class="rail-stat"><span>慶生人均預算</span><strong>1–3k<span> TWD</span></strong></div>
