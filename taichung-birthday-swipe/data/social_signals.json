@@ -55,5 +55,27 @@
     ],
     "origin": "reviewed_index",
     "lastChecked": "2026-11-19"
+  },
+  {
+    "platform": "Dcard",
+    "url": "https://www.dcard.tw/f/food/p/262046421",
+    "title": "台中慶生餐廳請益（內有選手）",
+    "note": "比較大股熟成燒肉雙人套餐與食量顧慮",
+    "restaurants": [
+      "oomata"
+    ],
+    "origin": "reviewed_index",
+    "lastChecked": "2026-11-19"
+  },
+  {
+    "platform": "Dcard",
+    "url": "https://www.dcard.tw/f/food/p/240556232",
+    "title": "台中｜新開幕樂葵法式鐵板燒",
+    "note": "分享樂葵法式鐵板燒用餐經驗",
+    "restaurants": [
+      "le-gout-chongde"
+    ],
+    "origin": "reviewed_index",
+    "lastChecked": "2026-11-19"
   }
 ]
