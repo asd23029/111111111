@@ -6,14 +6,15 @@
   <meta name="theme-color" content="#fffdf9">
   <meta name="description" content="用左滑右滑，找到台中最適合慶生的餐廳。探索真實餐廳照片、料理與氣氛，匯入 Google 地圖清單，和朋友一起挑選。">
   <meta property="og:title" content="今晚，吃哪間？｜台中慶生餐廳滑選">
-  <meta property="og:description" content="左滑先不要，右滑我可以。台中 NT$1,000–3,000／人慶生餐廳，讓選擇變得有趣。">
+  <meta property="og:description" content="滑過照片與生日情境題，最後才揭曉台中適合慶生的餐廳。">
   <title>今晚，吃哪間？｜台中慶生餐廳滑選</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="theme-light.css">
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="quiz-style.css">
+  <script src="quiz-app.js" defer></script>
 </head>
 <body>
   <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
@@ -26,44 +27,69 @@
       <button class="topbar-share" id="inviteBtn" type="button" title="邀請朋友一起玩"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 16V3m0 0L7 8m5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg><span>邀朋友玩</span></button>
     </header>
     <main>
-      <section id="explore" class="page is-active" aria-label="探索餐廳">
-        <div class="intro"><div class="eyebrow"><span class="eyebrow-line"></span>BIRTHDAY DINNER CLUB <span class="little-star">✦</span> 台中限定</div>
-          <h1>生日這一餐，<br><em>滑到喜歡為止 ♡</em></h1>
-          <p>台中慶生餐廳，每人預算 NT$1,000–3,000。<br class="hide-desktop">左滑跳過、右滑收藏，一起找到喜歡的那間。</p>
-        </div>
-        <div class="section-heading"><div><span class="section-kicker">01 / SET THE MOOD</span><h2>先選你喜歡的 ♡</h2></div><button class="text-link" id="clearFilters" type="button">清除篩選 ↗</button></div>
-        <div class="filters" id="filters"></div>
-        <div class="deck-header"><div><span class="section-kicker">02 / THE SWIPE</span><h2>喜歡就往右滑 <span class="accent-heart">♥</span></h2></div><div class="progress-group"><span id="progressText">01 / 07</span><div class="progress-bar"><span id="progressFill"></span></div></div></div>
-        <div class="swipe-layout">
-          <div class="deck-frame">
-            <div class="swipe-hint left">PASS ↖</div><div class="swipe-hint right">LOVE ↗</div>
-            <div id="deck" class="deck" aria-live="polite"></div>
-            <div class="deck-actions">
-              <button id="rejectBtn" class="circle-btn reject" aria-label="不要這間" type="button"><span>✕</span></button>
-              <button id="undoBtn" class="circle-btn undo" aria-label="復原上一張" title="復原上一張" type="button"><span>↶</span></button>
-              <button id="likeBtn" class="circle-btn like" aria-label="收藏這間" type="button"><span>♥</span></button>
-            </div>
-            <div class="gesture-help">← 左滑不喜歡 <span>·</span> 右滑加入心動清單 →</div>
+      <section id="explore" class="page is-active" aria-label="生日餐廳偏好滑卡測驗">
+        <div class="quiz-hero">
+          <div class="eyebrow"><span class="eyebrow-line"></span> BIRTHDAY DATE QUIZ <span class="little-star">✦</span> 台中限定</div>
+          <h1>滑幾張心動照片，<br><em>找到生日那一間。 ♡</em></h1>
+          <p>先看餐廳風格、料理、環境的實景照片，再回答幾道情境題。<br class="hide-desktop">左滑「還好」、右滑「喜歡」，最後才揭曉推薦餐廳。</p>
+          <div class="quiz-journey" id="quizJourney" aria-label="測驗階段">
+            <div class="journey-item current" data-phase="photo"><span>01</span><div><strong>滑喜歡的照片</strong><small>風格・料理・空間</small></div></div>
+            <span class="journey-line">✦</span>
+            <div class="journey-item" data-phase="scenario"><span>02</span><div><strong>回答情境題</strong><small>想怎麼過生日？</small></div></div>
+            <span class="journey-line">✦</span>
+            <div class="journey-item" data-phase="results"><span>03</span><div><strong>解鎖推薦</strong><small>最後才看餐廳名字</small></div></div>
           </div>
-          <aside class="right-rail">
-            <div class="rail-label">A SWEET LITTLE NOTE <span>✳</span></div>
-            <h3>生日的儀式感，<br>就從選餐廳<br>開始吧 ♡</h3>
-            <p>美味的主餐、剛好的燈光、想拍照的小角落。把心動的都留下，一間一間慢慢挑。</p>
-            <div class="rail-divider"></div>
-            <div class="rail-stat"><span>精選台中餐廳</span><strong id="railCount">07<span>間</span></strong></div>
-            <div class="rail-stat"><span>慶生人均預算</span><strong>1–3k<span> TWD</span></strong></div>
-            <button class="rail-cta" id="railImport" type="button">有自己的口袋名單？<br><strong>匯入 Google 地圖收藏 ↗</strong></button>
+        </div>
+        <div class="quiz-grid">
+          <div class="quiz-play">
+            <div class="quiz-progress-top">
+              <div><span class="section-kicker" id="quizPhaseLabel">STEP 01 · STYLE PHOTOS</span><h2 id="quizStageTitle">跟著感覺選就好 ✿</h2></div>
+              <span class="quiz-count" id="quizCount">01 / 20</span>
+            </div>
+            <div class="quiz-progress-track"><span id="quizProgressFill"></span></div>
+            <div class="quiz-deck-shell">
+              <div class="swipe-stamp stamp-no" id="stampNo">先不要 ✕</div>
+              <div class="swipe-stamp stamp-yes" id="stampYes">好喜歡 ♡</div>
+              <div class="quiz-deck" id="quizDeck" aria-live="polite"></div>
+            </div>
+            <div class="quiz-actions">
+              <button type="button" id="rejectBtn" class="quiz-action reject" aria-label="左滑：不喜歡"><span>✕</span><small>還好</small></button>
+              <button type="button" id="undoBtn" class="quiz-action undo" aria-label="復原上一題" title="復原上一題"><span>↶</span><small>上一步</small></button>
+              <button type="button" id="likeBtn" class="quiz-action like" aria-label="右滑：喜歡"><span>♡</span><small>喜歡</small></button>
+            </div>
+            <p class="gesture-note">也可以直接左右滑卡片，或使用鍵盤 ← →</p>
+          </div>
+          <aside class="quiz-guide">
+            <span class="guide-sparkle">✻</span>
+            <div class="section-kicker">HOW TO PLAY</div>
+            <h3>跟著直覺，<br>選一場喜歡的生日。</h3>
+            <p>現在不會直接看到餐廳名稱。每張照片與每道情境題，都會幫你找到更接近口味的那間店。</p>
+            <div class="guide-legend"><span class="legend-no">✕</span><div><strong>往左滑</strong><small>這種感覺我還好</small></div></div>
+            <div class="guide-legend"><span class="legend-yes">♡</span><div><strong>往右滑</strong><small>就是我喜歡的感覺</small></div></div>
+            <div class="guide-info"><span>台中慶生餐廳</span><strong id="verifiedCount">11 間</strong></div>
+            <div class="guide-info"><span>預設參考預算</span><strong>NT$1,000–3,000／人</strong></div>
+            <button class="guide-link" id="jumpImport" type="button">有自己的 Google 地圖收藏？<br><strong>把口袋清單帶進來 ↗</strong></button>
+            <button class="guide-reset" id="resetQuiz" type="button">重新開始這輪測驗 ↶</button>
           </aside>
         </div>
-        <p class="notice">餐廳照片連結至標示來源，版權歸原權利人所有。社群連結僅代表公開討論提及，並非評分或背書；Threads／Facebook／Instagram 僅收集公開索引可見的推薦。價格為參考點餐預算，依現場菜單、套餐與服務費為準；本站不提供即時訂位庫存。</p>
+        <p class="notice">測驗圖片來自實際餐廳的公開照片，點選照片來源可查閱出處；滑卡時不顯示店名，避免影響直覺。推薦依照片標籤與情境偏好比對，非即時評分或訂位保證。實際價格以餐廳菜單及服務費為準。</p>
       </section>
-      <section id="favorites" class="page" aria-label="心動清單">
-        <div class="page-heading"><span class="section-kicker">YOUR SHORTLIST</span><h1>你的心動清單 <em>♥</em></h1><p>右滑留下的餐廳，都在這裡。</p></div>
-        <div class="favs-tools"><span id="favCount">已收藏 0 間</span><div><button class="subtle-btn" id="shareFavs" type="button">分享清單 ↗</button><button class="subtle-btn" id="resetChoices" type="button">重新選一輪</button></div></div>
-        <div id="favoriteGrid" class="favorite-grid"></div>
+      <section id="results" class="page" aria-label="你的慶生餐廳推薦">
+        <div class="result-header"><span class="section-kicker">YOUR BIRTHDAY MATCH ✦</span><div class="result-decoration">✿ ♡ ✦</div>
+          <h1>好像找到<br><em>你的生日餐廳了！</em></h1>
+          <p id="resultSubtitle">根據你喜歡的照片與情境，幫你挑出最合拍的餐廳。</p>
+        </div>
+        <div id="resultsList" class="results-list"></div>
+        <div id="uncategorizedImports"></div>
+        <div class="result-tools">
+          <button type="button" class="primary-btn" id="shareResults">分享推薦給朋友 ♡ <span>↗</span></button>
+          <button type="button" class="subtle-btn" id="againBtn">重新玩一次 ↶</button>
+          <button type="button" class="subtle-btn" id="editLastBtn">修改上一題</button>
+        </div>
+        <p class="notice">推薦順序依個人滑選偏好計算。結果不代表品質評鑑；餐廳的價格、座位和慶生安排請以官方資訊為準。</p>
       </section>
       <section id="import" class="page" aria-label="匯入 Google 地圖收藏">
-        <div class="page-heading"><span class="section-kicker">BRING YOUR LIST</span><h1>把口袋名單<br><em>一起帶來。</em></h1><p>Google 地圖存了一堆餐廳？把清單加進來，一起滑、一起選。</p></div>
+        <div class="page-heading"><span class="section-kicker">BRING YOUR LIST</span><h1>把口袋名單<br><em>一起帶來。</em></h1><p>Google 地圖存了不少餐廳？把清單帶進來，尚未確認資料的店家會先放在候選名單。</p></div>
         <div class="reference-box" aria-label="收藏的 Google 地圖參考清單">
           <span class="section-kicker">YOUR SHARED MAPS</span>
           <h2>已加入的兩份 Google 地圖參考清單 <span>♡</span></h2>
@@ -86,7 +112,11 @@
         <div class="import-summary"><div><span class="section-kicker">YOUR IMPORTS</span><h2>已加入的餐廳 <span id="importCount">0</span></h2></div><button id="clearImported" class="subtle-btn" type="button">清空匯入</button></div><div id="importedList" class="imported-list"></div>
       </section>
     </main>
-    <nav class="bottom-nav" aria-label="功能選單"><button data-tab="explore" class="nav-tab active" type="button"><span>◈</span><small>滑餐廳</small></button><button data-tab="favorites" class="nav-tab" type="button"><span>♡</span><small>心動清單</small><i id="navHeartCount" hidden>0</i></button><button data-tab="import" class="nav-tab" type="button"><span>↥</span><small>匯入清單</small></button></nav>
+    <nav class="bottom-nav" aria-label="功能選單">
+      <button data-tab="explore" class="nav-tab active" type="button"><span>✳</span><small>開始滑卡</small></button>
+      <button data-tab="results" class="nav-tab" type="button"><span>♡</span><small>推薦結果</small><i id="navHeartCount" hidden>★</i></button>
+      <button data-tab="import" class="nav-tab" type="button"><span>↥</span><small>地圖清單</small></button>
+    </nav>
     <footer class="footer"><span>✳ TONIGHT, WHERE TO EAT?</span><span>Made for birthday nights in Taichung · 2026</span></footer>
   </div>
   <div id="dialogRoot"></div><div id="toast" class="toast" role="status" aria-live="polite"></div>
