@@ -54,7 +54,7 @@
             <button class="rail-cta" id="railImport" type="button">有自己的口袋名單？<br><strong>匯入 Google 地圖收藏 ↗</strong></button>
           </aside>
         </div>
-        <p class="notice">餐廳照片取自標示的來源網站，版權歸原權利人所有。價格為參考點餐預算，依現場菜單、套餐與服務費為準；本網站不提供即時訂位庫存。</p>
+        <p class="notice">餐廳照片連結至標示來源，版權歸原權利人所有。社群連結僅代表公開討論提及，並非評分或背書；Threads／Facebook／Instagram 僅收集公開索引可見的推薦。價格為參考點餐預算，依現場菜單、套餐與服務費為準；本站不提供即時訂位庫存。</p>
       </section>
       <section id="favorites" class="page" aria-label="心動清單">
         <div class="page-heading"><span class="section-kicker">YOUR SHORTLIST</span><h1>你的心動清單 <em>♥</em></h1><p>右滑留下的餐廳，都在這裡。</p></div>
@@ -64,8 +64,8 @@
       <section id="import" class="page" aria-label="匯入 Google 地圖收藏">
         <div class="page-heading"><span class="section-kicker">BRING YOUR LIST</span><h1>把口袋名單<br><em>一起帶來。</em></h1><p>Google 地圖存了一堆餐廳？把清單加進來，一起滑、一起選。</p></div>
         <div class="import-grid">
-          <div class="import-panel primary-import"><div class="panel-icon">↥</div><span class="section-kicker">01 / IMPORT A FILE</span><h2>從 Google 地圖匯出</h2><p>透過 Google Takeout 匯出「已儲存的地點」，上傳 JSON、CSV、KML、GeoJSON，或自行整理的 TXT。</p>
-            <label class="file-drop" id="fileDrop" for="fileInput"><span class="upload-symbol">↑</span><strong>選擇檔案，或拖曳到這裡</strong><small>.json · .csv · .kml · .geojson · .txt</small><input id="fileInput" type="file" accept=".json,.csv,.kml,.geojson,.txt,text/plain,application/json,text/csv"></label>
+          <div class="import-panel primary-import"><div class="panel-icon">↥</div><span class="section-kicker">01 / IMPORT A FILE</span><h2>從 Google 地圖匯出</h2><p>前往 Google Takeout 勾選「已儲存／Saved」，下載清單 CSV（可一次選取多份），也支援 JSON、KML、GeoJSON 或 TXT。</p>
+            <label class="file-drop" id="fileDrop" for="fileInput"><span class="upload-symbol">↑</span><strong>選擇檔案，或拖曳到這裡</strong><small>.json · .csv · .kml · .geojson · .txt</small><input id="fileInput" type="file" multiple accept=".json,.csv,.kml,.geojson,.txt,text/plain,application/json,text/csv"></label>
             <a class="inline-link" target="_blank" rel="noopener noreferrer" href="https://takeout.google.com/">前往 Google Takeout 匯出 ↗</a>
           </div>
           <div class="import-panel"><div class="panel-icon">⌁</div><span class="section-kicker">02 / PASTE YOUR LIST</span><h2>直接貼上餐廳名稱</h2><p>每行一間餐廳，支援「餐廳名稱｜地區｜預算」格式。未提供照片會顯示待補照片，不會套用假圖片。</p><textarea id="pasteNames" rows="5" placeholder="例如：&#10;屋馬燒肉 中港店&#10;某某餐酒館｜西區｜1800"></textarea><button id="pasteImport" type="button" class="primary-btn">加入我的待選餐廳 <span>→</span></button></div>
