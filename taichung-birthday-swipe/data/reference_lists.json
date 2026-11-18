@@ -1,0 +1,121 @@
+{
+  "updated": "2026-11-19",
+  "lists": [
+    {
+      "id": "eating",
+      "name": "Eating",
+      "source": "https://maps.app.goo.gl/wGYZkv3gzLGndnWA7",
+      "reportedTotal": 220,
+      "visibleSample": 20,
+      "items": [
+        {
+          "name": "AOZA",
+          "type": "早午餐",
+          "eligible": "unverified"
+        },
+        {
+          "name": "谷岤",
+          "type": "早午餐",
+          "eligible": "unverified"
+        },
+        {
+          "name": "Lau Chang Tzai",
+          "type": "火鍋",
+          "eligible": "unverified"
+        },
+        {
+          "name": "所 勤美店",
+          "type": "義式料理",
+          "eligible": "unverified"
+        },
+        {
+          "name": "玉門關以西 − 新疆手工奶皮優格",
+          "type": "甜點",
+          "eligible": "unverified"
+        },
+        {
+          "name": "SWADISHT INDIAN RESTAURANT (印度美味餐廳)",
+          "type": "印度料理",
+          "eligible": "unverified"
+        },
+        {
+          "name": "Viet Cafe",
+          "type": "越南料理",
+          "eligible": "unverified"
+        },
+        {
+          "name": "Puro Gelato 義式冰淇淋",
+          "type": "冰淇淋",
+          "eligible": "unverified"
+        },
+        {
+          "name": "圓仔豆花",
+          "type": "甜點",
+          "eligible": "unverified"
+        },
+        {
+          "name": "豆花匠人",
+          "type": "甜點",
+          "eligible": "unverified"
+        },
+        {
+          "name": "Subber",
+          "type": "三明治",
+          "eligible": "unverified"
+        },
+        {
+          "name": "Jia Gelato",
+          "type": "冰淇淋",
+          "eligible": "unverified"
+        },
+        {
+          "name": "Texas Rangers Fried Chicken",
+          "type": "炸雞",
+          "eligible": "unverified"
+        },
+        {
+          "name": "天母國王烘焙",
+          "type": "烘焙",
+          "eligible": "unverified"
+        },
+        {
+          "name": "pecora",
+          "type": "義式料理",
+          "eligible": "unverified"
+        },
+        {
+          "name": "國鼎食品有限公司",
+          "type": "糕點",
+          "eligible": "unverified"
+        },
+        {
+          "name": "劉仲記食品",
+          "type": "烘焙",
+          "eligible": "unverified"
+        },
+        {
+          "name": "寶玉",
+          "type": "餐廳",
+          "eligible": "unverified"
+        },
+        {
+          "name": "Ji Ji GG Korean restaurants",
+          "type": "韓式料理",
+          "eligible": "unverified"
+        },
+        {
+          "name": "麓 餐館 Lù Trattoria（預約制）",
+          "type": "餐酒館",
+          "eligible": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "list-one",
+      "name": "Google 地圖清單 01",
+      "source": "https://maps.app.goo.gl/ArYZJBZ1c9hAUNEv5",
+      "items": [],
+      "status": "pending_public_access"
+    }
+  ]
+}
