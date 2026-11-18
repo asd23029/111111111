@@ -61,11 +61,62 @@ function notify(message){
  el.textContent=message;el.classList.add("visible");
  clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("visible"),3200);
 }
+
+// Secondary, source-linked restaurant photos for hosts that block direct image embedding.
+// Each candidate retains the actual restaurant/photo publisher attribution.
+const PHOTO_ALTERNATES={
+ "p-style-vintage":[
+  {url:"https://pimg.1px.tw/bear31409/1742308217-2894672635-g.jpg",source:"https://bear31409.pixnet.net/blog/posts/10358261527"},
+  {url:"https://live.staticflickr.com/65535/55190046520_b05821023a_b.jpg",source:"https://orange-dog.com/13yakinuku/"}
+ ],
+ "p-food-steak":[
+  {url:"https://obs.line-scdn.net/0hYj0let48BkUNFS9s6R95EjRDCjQ-cRNDY20eJC5ACCVyJl1AZCYcPy0SXCU8dUVDZm9BIiAWDyEpchQaMHQ",source:"https://buy.line.me/u/article/175423"}
+ ],
+ "p-food-french":[
+  {url:"https://v3-statics.mirrormedia.mg/images/20230103171324-5d21f8bac1d2d16ee309f49254c650ce-w1600.jpg",source:"https://www.mirrormedia.mg/story/20230103food002"},
+  {url:"https://pimg.1px.tw/jennieschen/1742199462-615466110-g.jpg",source:"https://jennieschen.pixnet.net/blog/posts/49578772"}
+ ],
+ "p-food-teppan":[
+  {url:"https://img.fun-life.com.tw/restaurant/le-gout/DSC06798.jpg",source:"https://shin.tw/le-gout/"},
+  {url:"https://media.vogue.com.tw/photos/635bbfeb7440a0a03bd06aa9/master/w_1600%2Cc_limit/IMG-8548.jpg",source:"https://www.vogue.com.tw/lifestyle/article/%E6%A8%82%E8%91%B5%E9%90%B5%E6%9D%BF%E7%87%92-%E6%96%B0%E5%A4%A9%E5%9C%B0-le-gout-%E5%8F%B0%E4%B8%AD"}
+ ],
+ "p-env-date":[
+  {url:"https://archsunny.com/wp-content/uploads/2020/12/1F-2-16-scaled.jpg",source:"https://archsunny.com/%E6%B3%95%E6%A3%AE%E5%B0%8F%E9%A4%A8%E6%B3%95%E5%BC%8F%E9%A4%90%E5%BB%B3/"}
+ ],
+ "p-env-photogenic":[
+  {url:"https://www.fore-restaurant.com/archive/image/uploads/fore-restaurant-6-ufnd0z.jpg",source:"https://www.fore-restaurant.com/article_d.php?id=122&lang=tw&tb=4"},
+  {url:"https://cc.tvbs.com.tw/img/program/upload/2024/08/14/20240814182200-a30c2646.jpg",source:"https://supertaste.tvbs.com.tw/food/350770"}
+ ],
+ "p-main-beef":[
+  {url:"https://media.lyes.tw/photo/90/90pey88k4zeaw0-9/o.jpg",source:"https://lyes.tw/hocom-%E5%A4%A7%E8%82%A1%E7%86%9F%E6%88%90%E7%87%92%E8%82%89%E5%B0%88%E9%96%80/"},
+  {url:"https://s.yimg.com/os/creatr-uploaded-images/2022-01/ecf56c40-76e8-11ec-9c6f-36dbe341de7c",source:"https://autos.yahoo.com.tw/%E5%8F%B0%E4%B8%AD%E3%80%8C%E5%A4%A7%E8%82%A1%E7%86%9F%E6%88%90%E7%87%92%E8%82%89%E5%B0%88%E9%96%80%E3%80%8D-30-%E7%A8%AE%E6%B8%85%E9%85%92%E8%87%AA%E5%8B%95%E8%B2%A9%E8%B3%A3%E6%A9%9F%E5%A5%BD%E5%96%9D%E5%A5%BD%E7%8E%A9%EF%BC%81%E5%85%A8%E7%A8%8B%E4%BB%A3%E7%83%A4%E8%BC%95%E9%AC%86%E5%90%83-164022701.html"}
+ ],
+ "p-main-seafood":[
+  {url:"https://cdn.walkerland.com.tw/images/upload/poi/p136806/m18300/d14c412eeb46b05d5ae679fa4fa493c961c0cbec.jpg",source:"https://www.walkerland.com.tw/article/view/416271"},
+  {url:"https://live.staticflickr.com/65535/55190046520_b05821023a_b.jpg",source:"https://orange-dog.com/13yakinuku/"}
+ ],
+ "p-feature-service":[
+  {url:"https://media.lyes.tw/photo/90/90pey88k4zeaw0-9/o.jpg",source:"https://lyes.tw/hocom-%E5%A4%A7%E8%82%A1%E7%86%9F%E6%88%90%E7%87%92%E8%82%89%E5%B0%88%E9%96%80/"},
+  {url:"https://img.fun-life.com.tw/restaurant/le-gout/DSC06798.jpg",source:"https://shin.tw/le-gout/"}
+ ],
+ "p-feature-dessert":[
+  {url:"https://megapx-assets.dcard.tw/images/dd909b00-071b-4d1b-ba7c-abfb85967bc9/1280.jpeg",source:"https://www.dcard.tw/f/food/p/255337771"},
+  {url:"https://pimg.1px.tw/mi0424/1690339478-3528632257-g.jpg",source:"https://mi0424.pixnet.net/blog/posts/7122022128"}
+ ]
+};
+
 function photoSource(question){
  const r=state.base.find(x=>x.id===question.photo);
  const pics=(r?.images||[]).filter(safeUrl);
  const idx=question.photoIndex||0;
- return {src:pics[idx]||pics[0]||"",credit:r?.credit||"",source:safeUrl(r?.source)||"",origin:r?.name||""};
+ const basePics=[...pics.slice(idx,idx+1),...pics.filter((url,i)=>i!==idx)];
+ const alt=(PHOTO_ALTERNATES[question.id]||[]).filter(x=>safeUrl(x.url));
+ const source=safeUrl(r?.source)||"";
+ // Prefer a confirmed semantic match and then try the researched picture's original URLs.
+ const first=(alt[0]||{url:basePics[0],source});
+ const sequence=[...alt.map(x=>({url:x.url,source:x.source})),...basePics.map(url=>({url,source}))];
+ return {src:safeUrl(first.url),source:safeUrl(first.source)||source,
+         candidates:sequence.filter((o,i,arr)=>o.url&&arr.findIndex(x=>x.url===o.url)===i)};
 }
 function photoCard(question){
  const image=photoSource(question);
@@ -110,12 +161,24 @@ function renderQuiz(){
  $("quizStageTitle").textContent=q.type==="scenario"?"如果是你，會想要嗎？":"這種感覺，你喜歡嗎？";
  deck.innerHTML=q.type==="photo"?photoCard(q):scenarioCard(q);
  const current=deck.querySelector(".preference-card");
- current.querySelectorAll("img").forEach(img=>img.onerror=()=>{
-  const parent=img.parentElement;img.remove();
-  const fallback=document.createElement("div");fallback.className="quiz-image-fallback";
-  fallback.innerHTML="✿<small>這張照片暫時無法顯示，仍可依描述作答</small>";
-  parent.prepend(fallback);
- });
+ if(q.type==="photo"){
+  const image=photoSource(q),img=current.querySelector("img"),sourceLink=current.querySelector(".preference-credit");
+  let idx=0;
+  if(img)img.onerror=()=>{
+   idx++;
+   const next=image.candidates[idx];
+   if(next){
+    img.src=next.url;
+    if(sourceLink&&safeUrl(next.source))sourceLink.href=next.source;
+    return;
+   }
+   const parent=img.parentElement;img.remove();
+   const fallback=document.createElement("div");fallback.className="quiz-image-fallback";
+   fallback.innerHTML="✿<small>照片暫時無法顯示，可以依描述作答</small>";
+   parent.prepend(fallback);
+  };
+ }
+
  bindSwipe(current);
 }
 function resetStamps(){[$("stampNo"),$("stampYes")].forEach(el=>el.style.opacity="0");}
