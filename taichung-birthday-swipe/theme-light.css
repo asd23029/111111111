@@ -486,3 +486,27 @@ button:disabled { opacity:.4; }
 .reference-links small{display:block;color:#b4a59c;font-size:10px;font-weight:400;margin-top:6px}
 .reference-links b{color:#da8e7d;font-weight:700;margin-left:auto}
 @media(max-width:730px){.reference-box{padding:21px 17px;border-radius:18px}.reference-box h2{font-size:18px}.reference-links{grid-template-columns:1fr}.reference-links a{padding:12px 14px}}
+
+.reference-results-header{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-top:24px;margin-bottom:10px}
+.reference-results-header strong{color:#53463d;font-size:14px}
+.reference-results-header strong span{color:#db8270;background:#fff;padding:3px 9px;border-radius:20px;margin-left:6px}
+.reference-results-header small{color:#aca199;font-size:10px}
+.reference-results{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.reference-set{border:1px solid #ecded5;border-radius:15px;background:#fff;overflow:hidden;min-width:0}
+.reference-set summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;padding:15px;color:#524a43;gap:10px}
+.reference-set summary::-webkit-details-marker{display:none}
+.reference-set summary strong{display:block;font-size:13px}
+.reference-set summary small{display:block;color:#a79990;font-size:10px;margin-top:4px}
+.reference-chevron{color:#db9a86;font-size:19px;transition:transform .2s}
+.reference-set[open] .reference-chevron{transform:rotate(180deg)}
+.reference-list-body{border-top:1px solid #f4e9e2;max-height:420px;overflow:auto;padding:0 11px}
+.reference-item{display:flex;gap:9px;align-items:center;justify-content:space-between;padding:13px 4px;border-bottom:1px solid #f6eee9}
+.reference-item:last-child{border-bottom:none}
+.reference-item>div{min-width:0;flex:1}
+.reference-item b{display:block;font-size:11px;color:#504a45;font-weight:700;overflow-wrap:anywhere}
+.reference-item small{display:block;font-size:10px;color:#aaa199;margin-top:4px}
+.reference-add{flex:0 0 auto;background:#fff1eb;border:1px solid #f6d4c5;border-radius:20px;color:#c57968;font-size:10px;font-weight:800;padding:8px 10px}
+.reference-add:hover{background:#ffe4db}
+.ref-present{font-size:10px;color:#6f9f7b;background:#edf6ec;padding:7px 9px;border-radius:20px;white-space:nowrap}
+.reference-loading{color:#aea39a;font-size:11px}
+@media(max-width:730px){.reference-results{grid-template-columns:1fr}.reference-results-header{flex-direction:column;align-items:flex-start;gap:6px}.reference-list-body{max-height:300px}}
