@@ -47,6 +47,8 @@ SEED = [
     ("Dcard", "https://www.dcard.tw/f/food/p/255943899", "台中慶生餐廳（內有選手）", ["meatgq"]),
     ("Dcard", "https://www.dcard.tw/f/food/p/255981012", "台中慶生餐廳求推薦", ["laffection"]),
     ("Dcard", "https://www.dcard.tw/f/food/p/237862078", "問 台中慶生餐廳", ["umai-zhonggang", "chaliu-gongyi", "laffection"]),
+    ("Dcard", "https://www.dcard.tw/f/food/p/262046421", "台中慶生餐廳請益", ["oomata"]),
+    ("Dcard", "https://www.dcard.tw/f/food/p/240556232", "台中樂葵法式鐵板燒", ["le-gout-chongde"]),
 ]
 ALIASES = {
     "umai-zhonggang": ["屋馬燒肉", "屋馬"],
@@ -58,6 +60,8 @@ ALIASES = {
     "jingcheng-yishan": ["精誠壹山", "精誠一山"],
     "gulu-dining": ["GULU Dining", "GULU餐酒館", "GULU dining"],
     "minsuizenraku": ["明水然樂", "明水然・樂", "明水然·樂"],
+    "oomata": ["大股熟成燒肉", "大股熟成", "大股燒肉"],
+    "le-gout-chongde": ["樂葵法式鐵板燒", "樂葵鐵板燒"],
 }
 ROBOTS: dict[str, bool] = {}
 
