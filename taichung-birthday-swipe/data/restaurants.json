@@ -1,0 +1,407 @@
+[
+  {
+    "id": "umai-zhonggang",
+    "name": "屋馬燒肉・中港店",
+    "area": "西屯區",
+    "address": "台中市西屯區台灣大道三段300號",
+    "budget": [
+      1000,
+      2000
+    ],
+    "cuisine": "日式燒肉",
+    "tagline": "朋友聚餐、慶生聚會的經典選擇。",
+    "desc": "人氣日式燒肉與豐富套餐。訂位時可主動告知慶生需求，詢問店家可提供的慶祝安排。",
+    "styles": [
+      "日式質感",
+      "都會奢華"
+    ],
+    "foods": [
+      "燒肉"
+    ],
+    "atmos": [
+      "熱鬧聚會",
+      "私密包廂"
+    ],
+    "mains": [
+      "牛肉",
+      "和牛",
+      "海鮮"
+    ],
+    "features": [
+      "壽星驚喜",
+      "桌邊服務"
+    ],
+    "images": [
+      "https://inline.imgix.net/branch/-Kbsjto8qbSr0Yza-1gk%3Ainline-live-wuma-null-1901770b-3af8-4cef-8998-3b55dca211e8.JPG"
+    ],
+    "credit": "屋馬燒肉／inline 訂位",
+    "source": "https://www.umai.tw/online-booking/",
+    "more": "https://www.umai.tw/",
+    "priceNote": "套餐按人數分攤，留意 10% 服務費。",
+    "social": [
+      {
+        "platform": "Dcard",
+        "url": "https://www.dcard.tw/f/food/p/237862078",
+        "note": "台中慶生餐廳討論中提及"
+      }
+    ]
+  },
+  {
+    "id": "chaliu-gongyi",
+    "name": "茶六燒肉堂・公益店",
+    "area": "西區",
+    "address": "台中市西區公益路268號",
+    "budget": [
+      1000,
+      1800
+    ],
+    "cuisine": "日式燒肉",
+    "tagline": "木質系空間裡，烤肉香氣與熱鬧氣氛正好。",
+    "desc": "日式空間與雙人套餐，適合想熱鬧聚餐的生日。",
+    "styles": [
+      "日式質感"
+    ],
+    "foods": [
+      "燒肉"
+    ],
+    "atmos": [
+      "熱鬧聚會"
+    ],
+    "mains": [
+      "牛肉",
+      "和牛",
+      "海鮮"
+    ],
+    "features": [
+      "桌邊服務"
+    ],
+    "images": [
+      "https://media.lyes.tw/photo/7n/7nc3nk2qeuo3y2ar/o.jpg"
+    ],
+    "credit": "涼子是也（餐廳實景）",
+    "source": "https://lyes.tw/33144364-%E8%8C%B6%E5%85%AD/",
+    "more": "https://www.google.com/maps/search/?api=1&query=%E8%8C%B6%E5%85%AD%20%E5%85%AC%E7%9B%8A%E5%BA%97",
+    "priceNote": "以雙人套餐搭配加點估算，留意 10% 服務費。",
+    "social": [
+      {
+        "platform": "Dcard",
+        "url": "https://www.dcard.tw/f/food/p/237862078",
+        "note": "慶生討論中被提及"
+      }
+    ]
+  },
+  {
+    "id": "orange-taichung",
+    "name": "橘色涮涮屋・台中館",
+    "area": "西屯區",
+    "address": "台中市西屯區市政路581-8號",
+    "budget": [
+      1600,
+      2900
+    ],
+    "cuisine": "精品鍋物",
+    "tagline": "獨棟精品鍋物，低調、沉靜，又有一點儀式感。",
+    "desc": "精緻鍋物與桌邊涮煮，適合偏好低調私密的慶生。",
+    "styles": [
+      "都會奢華",
+      "日式質感"
+    ],
+    "foods": [
+      "火鍋"
+    ],
+    "atmos": [
+      "私密包廂",
+      "安靜約會"
+    ],
+    "mains": [
+      "牛肉",
+      "和牛",
+      "海鮮"
+    ],
+    "features": [
+      "桌邊服務",
+      "精緻甜點"
+    ],
+    "images": [
+      "https://hips.hearstapps.com/hmg-prod/images/ehehehg-67e3a65cbded4.jpg?crop=0.489xw%3A0.977xh%3B0%2C0.0163xh&resize=1200%3A%2A"
+    ],
+    "credit": "橘色涮涮屋／Cosmopolitan Taiwan",
+    "source": "https://www.cosmopolitan.com/tw/lifestyle/hot-topics/g64279766/new-orange-hot-pot-taichung-0325/",
+    "more": "https://orangeshabushabu.com/zh-TW/faq",
+    "priceNote": "套餐及海鮮升級影響價格，另留意 10% 服務費。",
+    "social": []
+  },
+  {
+    "id": "meatgq",
+    "name": "MEATGQ 橡木炙烤牛排館",
+    "area": "南屯區",
+    "address": "台中市南屯區益豐路四段699號",
+    "budget": [
+      1600,
+      2900
+    ],
+    "cuisine": "頂級牛排",
+    "tagline": "專為特別日子準備的牛排與正式感。",
+    "desc": "以橡木炙烤、熟成牛排為特色。午餐及不同套餐價差較大，確認後再訂位。",
+    "styles": [
+      "都會奢華",
+      "法式優雅"
+    ],
+    "foods": [
+      "牛排"
+    ],
+    "atmos": [
+      "安靜約會",
+      "私密包廂"
+    ],
+    "mains": [
+      "牛肉",
+      "海鮮"
+    ],
+    "features": [
+      "精緻甜點"
+    ],
+    "images": [
+      "https://s.yimg.com/ny/api/res/1.2/H8sNGRl6JZAXK_I_DAU38A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyOA--/https%3A/media.zenfs.com/en/yahoo__216/c941ddd5e519b0b7b04fa421cb34e848"
+    ],
+    "credit": "Yahoo 美食分享",
+    "source": "https://tw.news.yahoo.com/%E5%8F%B0%E4%B8%AD-%E7%82%99%E7%83%A4%E7%89%9B%E6%8E%92%E9%A4%A8-%E6%98%9F%E9%87%8E%E9%A4%90%E9%A3%B2%E9%9B%86%E5%9C%98-%E9%99%84%E5%81%9C%E8%BB%8A%E5%A0%B4-121422526.html",
+    "more": "https://singyaco.com.tw/news_detail.php?id=224",
+    "priceNote": "參考午間較低價套餐，注意服務費。",
+    "social": [
+      {
+        "platform": "Dcard",
+        "url": "https://www.dcard.tw/f/food/p/255943899",
+        "note": "台中慶生餐廳候選名單"
+      }
+    ]
+  },
+  {
+    "id": "fore",
+    "name": "FORE 柴燒牛排",
+    "area": "西區",
+    "address": "台中市西區五權西四街170號",
+    "budget": [
+      1100,
+      2300
+    ],
+    "cuisine": "柴燒牛排",
+    "tagline": "紅磚與玻璃光影，連拍照都很有生日感。",
+    "desc": "以柴燒牛排與玻璃屋空間見長，適合喜歡輕鬆浪漫的慶生。",
+    "styles": [
+      "浪漫玻璃屋"
+    ],
+    "foods": [
+      "牛排"
+    ],
+    "atmos": [
+      "安靜約會",
+      "拍照美景"
+    ],
+    "mains": [
+      "牛肉",
+      "海鮮"
+    ],
+    "features": [
+      "精緻甜點",
+      "景觀空間"
+    ],
+    "images": [
+      "https://www.fore-restaurant.com/archive/image/uploads/fore-restaurant-6-ufnd0z.jpg",
+      "https://cc.tvbs.com.tw/img/program/upload/2024/08/14/20240814182200-a30c2646.jpg"
+    ],
+    "credit": "FORE 官方網站／食尚玩家",
+    "source": "https://www.fore-restaurant.com/article_d.php?id=122&lang=tw&tb=4",
+    "more": "https://www.fore-restaurant.com/",
+    "priceNote": "參考點餐預算，實際低消以現場為準。",
+    "social": []
+  },
+  {
+    "id": "laffection",
+    "name": "法森小館 L'affection",
+    "area": "西區",
+    "address": "台中市西區存中街22號",
+    "budget": [
+      1800,
+      2900
+    ],
+    "cuisine": "法式套餐",
+    "tagline": "白桌巾與精緻法餐，生日就過得正式一點。",
+    "desc": "經典法式餐廳，適合想好好享用多道料理的兩人慶祝。",
+    "styles": [
+      "法式優雅"
+    ],
+    "foods": [
+      "法式料理"
+    ],
+    "atmos": [
+      "安靜約會"
+    ],
+    "mains": [
+      "牛肉",
+      "海鮮",
+      "多道套餐"
+    ],
+    "features": [
+      "精緻甜點"
+    ],
+    "images": [
+      "https://archsunny.com/wp-content/uploads/2020/12/1F-2-16-scaled.jpg"
+    ],
+    "credit": "築晴設計（餐廳空間攝影）",
+    "source": "https://archsunny.com/%E6%B3%95%E6%A3%AE%E5%B0%8F%E9%A4%A8%E6%B3%95%E5%BC%8F%E9%A4%90%E5%BB%B3/",
+    "more": "https://www.google.com/maps/search/?api=1&query=%E6%B3%95%E6%A3%AE%E5%B0%8F%E9%A4%A8%20%E5%8F%B0%E4%B8%AD",
+    "priceNote": "須確認套餐、飲品與服務費是否能控制在 NT$3,000 內。",
+    "social": [
+      {
+        "platform": "Dcard",
+        "url": "https://www.dcard.tw/f/food/p/255981012",
+        "note": "台中慶生餐廳選項討論"
+      }
+    ]
+  },
+  {
+    "id": "jingcheng-yishan",
+    "name": "精誠壹山・海鮮燒肉專門",
+    "area": "西區",
+    "address": "台中市西區精誠路13號",
+    "budget": [
+      1300,
+      2600
+    ],
+    "cuisine": "海鮮燒肉",
+    "tagline": "老宅庭院裡吃海鮮燒肉，專人代烤的儀式感。",
+    "desc": "老宅、庭院與特色燈飾，適合重視空間與壽星驚喜的慶生。",
+    "styles": [
+      "老宅氛圍",
+      "日式質感"
+    ],
+    "foods": [
+      "燒肉"
+    ],
+    "atmos": [
+      "私密包廂",
+      "拍照美景"
+    ],
+    "mains": [
+      "牛肉",
+      "和牛",
+      "海鮮"
+    ],
+    "features": [
+      "壽星驚喜",
+      "桌邊服務",
+      "景觀空間"
+    ],
+    "images": [
+      "https://bigsharkgogogo.tw/wp-content/uploads/2025/01/oneshan-2-jpg.webp",
+      "https://pimg.1px.tw/bear31409/1742308217-2894672635-g.jpg"
+    ],
+    "credit": "鯊魚大口咬／熊痞痞",
+    "source": "https://bigsharkgogogo.tw/yakiniku13aa/",
+    "more": "https://jasonslife.tw/13-yakiniku/",
+    "priceNote": "參考套餐分攤後價格，留意服務費與升級餐點。",
+    "social": []
+  },
+  {
+    "id": "gulu-dining",
+    "name": "GULU Dining",
+    "area": "南區",
+    "address": "台中市南區民意街68號",
+    "budget": [
+      1000,
+      2000
+    ],
+    "cuisine": "創意餐酒館",
+    "tagline": "燈光微暗、小巧精緻，適合兩人靜靜慶祝。",
+    "desc": "少量座位、創意料理與餐酒搭配，生日蛋糕可另詢問攜帶規則。",
+    "styles": [
+      "法式優雅",
+      "都會奢華"
+    ],
+    "foods": [
+      "法式料理",
+      "義式料理"
+    ],
+    "atmos": [
+      "安靜約會",
+      "拍照美景"
+    ],
+    "mains": [
+      "海鮮",
+      "牛肉",
+      "多道套餐"
+    ],
+    "features": [
+      "精緻甜點"
+    ],
+    "images": [
+      "https://nowhot01.com/wp-content/uploads/2025/04/gulu-dining-8.webp",
+      "https://nowhot01.com/wp-content/uploads/2025/04/gulu-dining-6.webp"
+    ],
+    "credit": "現在夯什麼（實際餐點與空間）",
+    "source": "https://nowhot01.com/gulu-dining/",
+    "more": "https://www.opentable.com.tw/restaurant/profile/213659",
+    "priceNote": "單點約每人 NT$1,000–2,000 估算，依點餐品項及飲料調整。",
+    "social": [
+      {
+        "platform": "Dcard",
+        "url": "https://www.dcard.tw/f/food/p/255337771",
+        "note": "有獨立美食推薦文，提到料理與氛圍"
+      },
+      {
+        "platform": "Dcard",
+        "url": "https://www.dcard.tw/f/food/p/258493755",
+        "note": "被列入慶生餐廳比較名單"
+      }
+    ]
+  },
+  {
+    "id": "minsuizenraku",
+    "name": "明水然・樂 台中大魯閣店",
+    "area": "東區",
+    "address": "台中市東區復興路四段186號",
+    "budget": [
+      1600,
+      2640
+    ],
+    "cuisine": "無菜單鐵板燒",
+    "tagline": "現場鐵板料理表演，慶生晚餐的主角就是你。",
+    "desc": "日式無菜單鐵板燒，多道料理與龍蝦、和牛等食材組合。",
+    "styles": [
+      "日式質感",
+      "都會奢華"
+    ],
+    "foods": [
+      "鐵板燒"
+    ],
+    "atmos": [
+      "安靜約會"
+    ],
+    "mains": [
+      "牛肉",
+      "和牛",
+      "海鮮",
+      "多道套餐"
+    ],
+    "features": [
+      "壽星驚喜",
+      "桌邊服務",
+      "精緻甜點"
+    ],
+    "images": [
+      "https://s.yimg.com/ny/api/res/1.2/YYuDheD0RPYYUa2hl53rSQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTYyNA--/https%3A/s.yimg.com/os/creatr-uploaded-images/2025-08/f53ae862-868b-11f0-bd5f-dd920d07a42f"
+    ],
+    "credit": "Yahoo 新聞（餐廳實景）",
+    "source": "https://tw.news.yahoo.com/%E5%8F%B0%E4%B8%AD%E9%A0%82%E7%B4%9A%E7%84%A1%E8%8F%9C%E5%96%AE%E9%90%B5%E6%9D%BF%E7%87%92%EF%BD%9E1600%E5%90%83%E5%BE%97%E5%88%B0%E9%BE%8D%E8%9D%A6%E3%80%81a5%E5%92%8C%E7%89%9B%EF%BC%8Ccp%E5%80%BC%E7%88%86%E8%A1%A8%EF%BC%81-171726342.html",
+    "more": "https://www.minsuizenraku.com/branch/TWstore/1",
+    "priceNote": "樂饗宴 NT$1,600 與樂盛宴 NT$2,400，另 10% 服務費（參考資料，訂位前確認）。",
+    "social": [
+      {
+        "platform": "美食推薦",
+        "url": "https://uptogo.com.tw/%E7%BE%8E%E9%A3%9F/%E5%92%96%E5%95%A1%E5%BB%B3%E9%85%92%E5%90%A7/%E5%8F%B0%E4%B8%AD%E7%94%9F%E6%97%A5%E8%81%9A%E6%9C%83%E5%8E%BB%E5%93%AA%E9%81%8E%EF%BC%9F/",
+        "note": "台中慶生餐廳推薦及套餐價格"
+      }
+    ]
+  }
+]
