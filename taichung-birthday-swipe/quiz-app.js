@@ -33,7 +33,7 @@ const PHOTO_QUESTIONS=[
   {id:"p-food-french",group:"foods",value:"法式料理",photo:"gulu-dining",label:"料理照",title:"擺盤精緻的小巧料理",desc:"每道菜端上桌都像小驚喜。"},
   {id:"p-food-teppan",group:"foods",value:"鐵板燒",photo:"le-gout-chongde",label:"料理照",title:"坐在板前欣賞主廚料理",desc:"喜歡食材和料理過程的互動。"},
   {id:"p-env-date",group:"atmos",value:"安靜約會",photo:"gulu-dining",photoIndex:1,label:"環境照",title:"安安靜靜的兩人晚餐",desc:"燈光剛剛好，能專心陪彼此。"},
-  {id:"p-env-gather",group:"atmos",value:"熱鬧聚會",photo:"umai-zhonggang",label:"環境照",title:"一群朋友一起開心大笑",desc:"喜歡生日桌上有熱鬧又自在的氣氛。"},
+  {id:"p-env-gather",group:"atmos",value:"熱鬧聚會",photo:"umai-zhonggang",label:"環境照",title:"帶點熱鬧感的用餐空間",desc:"就算只有兩個人，也喜歡熱鬧、有活力的氣氛。"},
   {id:"p-env-photogenic",group:"atmos",value:"拍照美景",photo:"fore",photoIndex:1,label:"環境照",title:"隨手一拍都好看的空間",desc:"想把這個特別的夜晚留在相簿。"},
   {id:"p-main-beef",group:"mains",value:"牛肉",photo:"oomata",label:"主食照",title:"今天就是要吃厲害的牛肉",desc:"牛肉派，看到好肉就很開心。"},
   {id:"p-main-seafood",group:"mains",value:"海鮮",photo:"jingcheng-yishan",photoIndex:1,label:"主食照",title:"海鮮的鮮甜最讓人期待",desc:"蝦、魚、海鮮料理都可以。"},
@@ -43,7 +43,7 @@ const PHOTO_QUESTIONS=[
 ].map(q=>({...q,type:"photo",tags:[{group:q.group,values:[q.value],weight:3}]}));
 const SCENARIOS=[
   {id:"s-date",type:"scenario",emoji:"💌",label:"約會情境",title:"這次生日想和另一半，安靜地聊一整晚。",desc:"不需要太多人，只想留給彼此時間。",tags:[{group:"atmos",values:["安靜約會"],weight:3},{group:"styles",values:["法式優雅","浪漫玻璃屋"],weight:1.5}]},
-  {id:"s-friends",type:"scenario",emoji:"🎉",label:"聚會情境",title:"生日就是要一群朋友一起，越熱鬧越好！",desc:"邊吃、邊拍、邊聊天才有感覺。",tags:[{group:"atmos",values:["熱鬧聚會"],weight:3},{group:"foods",values:["燒肉"],weight:1.5}]},
+  {id:"s-friends",type:"scenario",emoji:"🕯️",label:"兩人約會情境",title:"只有我們兩個人，我希望環境不要太吵。",desc:"比起人聲鼎沸，更想好好聊天、慢慢吃飯。",tags:[{group:"atmos",values:["安靜約會"],weight:3},{group:"styles",values:["法式優雅","日式質感"],weight:1.5}]},
   {id:"s-service",type:"scenario",emoji:"👩‍🍳",label:"服務情境",title:"希望有人幫忙料理，自己專心享受就好。",desc:"桌邊代烤或料理表演都讓我心動。",tags:[{group:"features",values:["桌邊服務"],weight:3},{group:"foods",values:["鐵板燒","燒肉"],weight:1}]},
   {id:"s-photos",type:"scenario",emoji:"📸",label:"氣氛情境",title:"今天的餐廳一定要好拍！",desc:"環境與燈光也是生日回憶的一部分。",tags:[{group:"atmos",values:["拍照美景"],weight:3},{group:"features",values:["景觀空間"],weight:2},{group:"styles",values:["浪漫玻璃屋","老宅氛圍"],weight:1}]},
   {id:"s-special",type:"scenario",emoji:"🎂",label:"儀式感情境",title:"希望生日有一點驚喜，感覺被好好慶祝。",desc:"想要漂亮收尾，或有值得記住的小細節。",tags:[{group:"features",values:["壽星驚喜","精緻甜點"],weight:2.5},{group:"mains",values:["多道套餐"],weight:1.5}]}
