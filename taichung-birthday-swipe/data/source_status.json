@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-11-19",
+  "mode": "reviewed_public_search_sources",
+  "platforms": {
+    "Dcard": {
+      "verifiedLinks": 5,
+      "note": "已核對公開討論連結；每日 GitHub Actions 可更新"
+    },
+    "Threads": {
+      "verifiedLinks": 0,
+      "note": "等待公開索引找到可核對的文章"
+    },
+    "Facebook": {
+      "verifiedLinks": 0,
+      "note": "僅收錄合法公開索引或授權專頁資訊"
+    },
+    "Instagram": {
+      "verifiedLinks": 0,
+      "note": "僅收錄合法公開索引或授權專頁資訊"
+    }
+  }
+}
