@@ -63,7 +63,7 @@ ALIASES = {
     "oomata": ["大股熟成燒肉", "大股熟成", "大股燒肉"],
     "le-gout-chongde": ["樂葵法式鐵板燒", "樂葵鐵板燒"],
 }
-ROBOTS: dict[str, bool] = {}
+ROBOTS: dict[str, urllib.robotparser.RobotFileParser | None] = {}
 
 def fetch(url: str, *, maxbytes: int = 600_000, timeout: int = 12) -> bytes:
     req = urllib.request.Request(url, headers={
@@ -83,10 +83,11 @@ def robots_allowed(url: str) -> bool:
             rp = urllib.robotparser.RobotFileParser()
             rp.set_url(f"{parsed.scheme}://{host}/robots.txt")
             rp.read()
-            ROBOTS[host] = bool(rp.can_fetch(USER_AGENT, url))
+            ROBOTS[host] = rp
         except Exception:
-            ROBOTS[host] = False  # fail closed
-    return ROBOTS[host]
+            ROBOTS[host] = None  # fail closed
+    rp = ROBOTS[host]
+    return bool(rp is not None and rp.can_fetch(USER_AGENT, url))
 
 class PageMeta(HTMLParser):
     def __init__(self):
