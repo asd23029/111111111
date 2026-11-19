@@ -1,22 +1,26 @@
 {
-  "checkedAt": "2026-11-19",
-  "mode": "reviewed_public_search_sources",
+  "checkedAt": "2026-11-19T08:48:50.635041+00:00",
+  "mode": "public_search_index_only",
   "platforms": {
     "Dcard": {
-      "verifiedLinks": 5,
-      "note": "已核對公開討論連結；每日 GitHub Actions 可更新"
+      "newIndexedMentions": 0,
+      "discoveryErrors": 0,
+      "note": "公開文章索引；無私人貼文、留言抓取或登入繞過"
     },
     "Threads": {
-      "verifiedLinks": 0,
-      "note": "等待公開索引找到可核對的文章"
+      "newIndexedMentions": 0,
+      "discoveryErrors": 0,
+      "note": "公開文章索引；無私人貼文、留言抓取或登入繞過"
     },
     "Facebook": {
-      "verifiedLinks": 0,
-      "note": "僅收錄合法公開索引或授權專頁資訊"
+      "newIndexedMentions": 0,
+      "discoveryErrors": 0,
+      "note": "公開文章索引；無私人貼文、留言抓取或登入繞過"
     },
     "Instagram": {
-      "verifiedLinks": 0,
-      "note": "僅收錄合法公開索引或授權專頁資訊"
+      "newIndexedMentions": 0,
+      "discoveryErrors": 0,
+      "note": "公開文章索引；無私人貼文、留言抓取或登入繞過"
     }
   }
 }

@@ -1,11 +1,24 @@
 [
   {
     "platform": "Dcard",
-    "url": "https://www.dcard.tw/f/food/p/258493755",
-    "title": "台中慶生餐廳（內有選手）",
-    "note": "討論 GULU Dining、Asiino、敘禾燒肉、水相餐聚苑等選項；意見不一，僅作選店線索",
+    "url": "https://www.dcard.tw/f/food/p/237862078",
+    "title": "問 台中慶生餐廳",
+    "note": "網友討論屋馬、茶六等熱門燒肉及法森",
     "restaurants": [
-      "gulu-dining"
+      "umai-zhonggang",
+      "chaliu-gongyi",
+      "laffection"
+    ],
+    "origin": "reviewed_index",
+    "lastChecked": "2026-11-19"
+  },
+  {
+    "platform": "Dcard",
+    "url": "https://www.dcard.tw/f/food/p/240556232",
+    "title": "台中｜新開幕樂葵法式鐵板燒",
+    "note": "分享樂葵法式鐵板燒用餐經驗",
+    "restaurants": [
+      "le-gout-chongde"
     ],
     "origin": "reviewed_index",
     "lastChecked": "2026-11-19"
@@ -45,13 +58,11 @@
   },
   {
     "platform": "Dcard",
-    "url": "https://www.dcard.tw/f/food/p/237862078",
-    "title": "問 台中慶生餐廳",
-    "note": "網友討論屋馬、茶六等熱門燒肉及法森",
+    "url": "https://www.dcard.tw/f/food/p/258493755",
+    "title": "台中慶生餐廳（內有選手）",
+    "note": "討論 GULU Dining、Asiino、敘禾燒肉、水相餐聚苑等選項；意見不一，僅作選店線索",
     "restaurants": [
-      "umai-zhonggang",
-      "chaliu-gongyi",
-      "laffection"
+      "gulu-dining"
     ],
     "origin": "reviewed_index",
     "lastChecked": "2026-11-19"
@@ -63,17 +74,6 @@
     "note": "比較大股熟成燒肉雙人套餐與食量顧慮",
     "restaurants": [
       "oomata"
-    ],
-    "origin": "reviewed_index",
-    "lastChecked": "2026-11-19"
-  },
-  {
-    "platform": "Dcard",
-    "url": "https://www.dcard.tw/f/food/p/240556232",
-    "title": "台中｜新開幕樂葵法式鐵板燒",
-    "note": "分享樂葵法式鐵板燒用餐經驗",
-    "restaurants": [
-      "le-gout-chongde"
     ],
     "origin": "reviewed_index",
     "lastChecked": "2026-11-19"
